@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gojobs-account-dev-config
+  namespace: gojobs
+data:
+  # stat
+  app.engine: mongo
+  app.port: '6767'
+  app.mongo.host: 192.168.99.102:32017

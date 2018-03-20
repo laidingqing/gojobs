@@ -1,0 +1,20 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj
+_test
+_build
+
+.DS_Store
+**/logs/*.log
+*.db*
+coverage.txt
+dist
+custom
+release
+
+
+**/target/**

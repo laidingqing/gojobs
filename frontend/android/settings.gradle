@@ -1,0 +1,3 @@
+rootProject.name = 'GoJobsAppDvaAntdMobile'
+
+include ':app'

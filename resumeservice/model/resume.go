@@ -4,7 +4,7 @@ import "time"
 
 //Resume defines ...
 type Resume struct {
-	ID         string      `bson:"_id" json:"id,omitempty"`
+	ID         string      `bson:"_id" json:"id,omitempty"` //AccountID
 	Name       string      `bson:"name" json:"name,omitempty"`
 	Bio        string      `bson:"bio" json:"bio,omitempty"`
 	Intentions []string    `bson:"intentions" json:"intentions,omitempty"` //意向
@@ -19,7 +19,7 @@ type Resume struct {
 
 //Work 工作经历
 type Work struct {
-	ID             string    `bson:"id" json:"id,omitempty"`
+	ID             string    `bson:"_id" json:"id,omitempty"`
 	Name           string    `bson:"name" json:"name,omitempty"`
 	JobPosition    int32     `bson:"jobPosition" json:"jobPosition,omitempty"`
 	JobName        int32     `bson:"jobName" json:"jobName,omitempty"`
@@ -34,7 +34,7 @@ type Work struct {
 
 //Education 教育
 type Education struct {
-	ID          string    `bson:"id" json:"id,omitempty"`
+	ID          string    `bson:"_id" json:"id,omitempty"`
 	Name        string    `bson:"name" json:"name,omitempty"`
 	Major       int32     `bson:"major" json:"major,omitempty"`
 	Degree      int32     `bson:"degree" json:"degree,omitempty"`
@@ -45,7 +45,7 @@ type Education struct {
 
 //Project 工作经历
 type Project struct {
-	ID          string    `bson:"id" json:"id,omitempty"`
+	ID          string    `bson:"_id" json:"id,omitempty"`
 	Name        string    `bson:"name" json:"name,omitempty"`
 	Role        string    `bson:"role" json:"role,omitempty"`
 	Description string    `bson:"description" json:"description,omitempty"`

@@ -15,6 +15,6 @@ coverage.txt
 dist
 custom
 release
-
+*/node_modules
 
 **/target/**

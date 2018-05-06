@@ -1,11 +1,9 @@
 package mongo
 
 import (
-	"fmt"
-
 	"github.com/Sirupsen/logrus"
+	"github.com/laidingqing/gojobs/resumeservice/conf"
 	"github.com/laidingqing/gojobs/resumeservice/model"
-	"github.com/spf13/viper"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
@@ -26,7 +24,7 @@ type Storage struct {
 //OpenSession open mongo client session.
 func (s *Storage) OpenSession() {
 	var err error
-	s.session, err = mgo.Dial(fmt.Sprintf("%s:%s", viper.GetString("mongo_host"), viper.GetString("mongo_port")))
+	s.session, err = mgo.Dial(conf.ResumeConf.Core.MongoURI)
 	if err != nil {
 		logrus.Fatal(err)
 	}

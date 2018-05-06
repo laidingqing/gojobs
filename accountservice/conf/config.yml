@@ -1,5 +1,5 @@
 core:
-  mongo_uri: localhost:27017 # mongo storage uri
+  mongo_uri: mongodb://192.168.0.130:27017 # mongo storage uri
   port: 6767 # app's port
   zipkin_uri: http://192.168.99.100:9411 # zipkin uri
   storage: mongo # use storage type.

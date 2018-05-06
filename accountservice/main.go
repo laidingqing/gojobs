@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"flag"
+	"fmt"
 	"log"
 
 	"github.com/Sirupsen/logrus"
@@ -20,13 +21,9 @@ var (
 )
 
 func init() {
-	opts := config.ConfYaml{}
-
-	flag.StringVar(&opts.Core.Storage, "storage", "mongo", "Environment storage")
-	flag.StringVar(&opts.Core.Port, "port", "6767", "service port")
-	flag.StringVar(&opts.Core.ZipkinURI, "zipkin", "http://192.168.99.100:9411", "service zipkin trace")
 	flag.StringVar(&configFile, "config", "", "Configuration file path.")
-
+	flag.Parse()
+	fmt.Println("config:", configFile)
 	var err error
 	conf.AccountConf, err = config.LoadConf(configFile)
 	if err != nil {

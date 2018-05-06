@@ -1,0 +1,56 @@
+{
+  "name": "GoJobs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "apk": "cd android && ./gradlew assembleRelease && cp ./app/build/outputs/apk/app-release.apk ../release.apk",
+    "apk-w": "cd android && gradlew assembleRelease && copy app\\build\\outputs\\apk\\app-release.apk ..\\release.apk /y",
+    "test": "jest",
+    "web": "cross-env PORT=3001 roadhog server",
+    "build": "roadhog build",
+    "lint": "eslint --ext .js index.js src",
+    "precommit": "npm run lint"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "antd-mobile": "^2.1.1",
+    "babel-runtime": "^6.9.2",
+    "dva": "^2.1.0",
+    "dva-core": "^1.1.0",
+    "rc-form": "^2.1.5",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-native": "0.51.0",
+    "react-navigation": "^1.0.0-beta.21",
+    "react-redux": "^5.0.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "21.2.0",
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "babel-plugin-import": "^1.6.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-react-native": "4.0.0",
+    "cross-env": "^5.1.1",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "expect": "^1.20.2",
+    "husky": "^0.12.0",
+    "jest": "21.2.1",
+    "pre-commit": "^1.2.2",
+    "react-test-renderer": "16.0.0",
+    "redbox-react": "^1.4.3",
+    "roadhog": "^1.2.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

@@ -26,7 +26,6 @@ type Storage struct {
 
 //OpenSession open mongo client session.
 func (mc *Storage) OpenSession() {
-
 	var err error
 	mc.session, err = mgo.Dial(conf.AccountConf.Core.MongoURI)
 	if err != nil {
